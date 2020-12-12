@@ -13,6 +13,13 @@ namespace Day5_HW.Products
         {
             return SalePrice - PurchasePrice;
         }
+        public Product(string name, string description, double purchasePrice, double salePrice)
+        {
+            Name = name;
+            Description = description;
+            PurchasePrice = purchasePrice;
+            SalePrice = salePrice;
+        }
         public void GetInfo()
         {
             Console.WriteLine
@@ -20,13 +27,6 @@ namespace Day5_HW.Products
                 $"Name = {Name};\nDescription = {Description};\nFinally Purchase Price = {PurchasePrice};\n" +
                 $"Finally Sale Price = {SalePrice};\nProfit from the deal = {CalculateProfit()}\n"
                 );
-        }
-        public Product(string name, string description, double purchasePrice, double salePrice)
-        {
-            Name = name;
-            Description = description;
-            PurchasePrice = purchasePrice;
-            SalePrice = salePrice;
         }
     }
 }
